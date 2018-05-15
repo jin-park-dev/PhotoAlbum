@@ -1,0 +1,1 @@
+export const LOAD_ALBUM_SUCCESS = "LOAD_ALBUM_SUCCESS";

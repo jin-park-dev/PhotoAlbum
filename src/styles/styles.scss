@@ -1,0 +1,36 @@
+/* Variables */
+$vin-blue: #5bb7db;
+
+
+
+/* Styles */
+
+body {
+  background-color: #efefef;
+
+}
+
+h1 {
+  color: #e2a331;
+}
+
+h2 {
+  color: $vin-blue;
+}
+
+
+
+
+
+
+
+.test {
+  max-width: 33%;
+  height: auto;
+}
+
+///*img {max-width:25%; height:auto}*/
+///*img {*/
+///*max-width:150px; !important*/
+///*height:150px; !important*/
+///*}*/

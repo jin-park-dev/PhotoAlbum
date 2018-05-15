@@ -1,0 +1,14 @@
+.test {
+  max-width: 33%;
+  height: auto;
+}
+
+/*img {max-width:25%; height:auto}*/
+/*img {*/
+  /*max-width:150px; !important*/
+  /*height:150px; !important*/
+/*}*/
+
+h1 {
+  color: #3dcce2;
+}

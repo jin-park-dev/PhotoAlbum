@@ -1,19 +1,18 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import Title from './Title';
+import Title from './AlbumTitle';
 import PhotoContainer from './PhotoContainer';
 
-class MyComponent extends Component {
-  render() {
-    return (
-      <div>
-        <Title/>
-        <PhotoContainer/>
-      </div>
-    );
-  }
-}
+const AlbumPage = () => {
+  return (
+    <div>
+      <Title />
+      <PhotoContainer />
+    </div>
+  );
+};
 
-MyComponent.propTypes = {};
 
-export default MyComponent;
+AlbumPage.propTypes = {};
+
+export default AlbumPage;

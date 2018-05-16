@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
-class MyComponent extends Component {
+class AlbumTitle extends Component {
   render() {
     return (
       <div className="text-center" style={{borderStyle: "solid"}}>
@@ -20,4 +20,4 @@ function mapStateToProps(state) {
 
 export default connect(
   mapStateToProps,
-)(MyComponent);
+)(AlbumTitle);

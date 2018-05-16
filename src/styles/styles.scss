@@ -2,8 +2,9 @@
 $vin-blue: #5bb7db;
 
 
-
+////////////
 /* Styles */
+////////////
 
 body {
   background-color: #efefef;
@@ -18,19 +19,35 @@ h2 {
   color: $vin-blue;
 }
 
+///////////////
+/* AlbumPage */
+///////////////
 
-
-
-
-
-
-.test {
-  max-width: 33%;
-  height: auto;
+.image-container-div {
+  //border-style: solid;
+  display: flex;
+  justify-content: flex-end;
+  width: 16vw;
+  height: 16vw;
+  overflow: hidden;
 }
 
-///*img {max-width:25%; height:auto}*/
-///*img {*/
-///*max-width:150px; !important*/
-///*height:150px; !important*/
-///*}*/
+.image-container-div > img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+///////////////
+/* PhotoPage */
+///////////////
+
+//same as "d-flex justify-content-center" in bootstrap
+.photo-container-div {
+  display: flex;
+  justify-content: center;
+}
+
+.PhotoPage-img {
+  height: 80vh
+}

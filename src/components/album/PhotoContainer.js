@@ -1,9 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
-
 import * as albumActions from '../../actions/albumActions';
 import Image from './Image';
 
@@ -26,10 +24,6 @@ class PhotoContainer extends Component {
     return _.map(album, photo => {
       return (
         <Image key={photo.pk} photo={photo}/>
-        // <li className="list-group-item" key={photo.pk}>
-        //   {photo.pk}. {photo.name}
-        //   {/*<Link to={`/posts/${post.id}`}>{post.id}: {post.title}</Link>*/}
-        // </li>
       )
     })
   }
@@ -40,8 +34,6 @@ class PhotoContainer extends Component {
     const {album} = this.props;
     return (
       <div>
-        ImagesMulti to be here...
-        Many Repeats. Probaby need it's own render method for Images
         <div className="d-flex flex-wrap">
           {this.renderImages(album)}
         </div>

@@ -8,6 +8,7 @@ import Header from './common/Header';
 import AlbumPage from './album/AlbumPage';
 import PhotoPage from './album/PhotoPage';
 import AboutPage from './about/AboutPage';
+import AlbumsPage from "./albumCollection/AlbumCollectionPage";
 
 // This is a class-based component because the current
 // version of hot reloading won't hot reload a stateless
@@ -20,8 +21,12 @@ class App extends React.Component {
         <Header />
         <Switch>
           <Route exact path="/" component={HomePage} />
-          <Route path="/album/:id" component={PhotoPage} />
-          <Route path="/album" component={AlbumPage} />
+          <Route path="/albums/:id/:id" component={PhotoPage} />
+          <Route path="/albums/:id" component={AlbumPage} />
+          <Route path="/albums" component={AlbumsPage} />
+
+          <Route path="/albumStatic/:id" component={PhotoPage} />
+
           <Route path="/about" component={AboutPage} />
           {/*<Route component={NotFoundPage} />*/}
         </Switch>

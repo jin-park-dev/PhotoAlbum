@@ -7,7 +7,7 @@ class AlbumTitle extends Component {
       <div className="text-center" style={{borderStyle: "solid"}}>
         <div className="title-pic">
           <h1>Title - make it center</h1>
-          Some image in background
+          Some image in background                      
         </div>
       </div>
     );
@@ -21,3 +21,4 @@ function mapStateToProps(state) {
 export default connect(
   mapStateToProps,
 )(AlbumTitle);
+

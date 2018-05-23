@@ -2,28 +2,24 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
+import {withRouter} from 'react-router-dom';
 import * as albumActions from '../../actions/albumActions';
 import Image from './Image';
 
 class PhotoContainer extends Component {
   constructor(props, context) {
     super(props, context);
-
-    this.state = {
-      // albumX: 'PhotoContainer-state-album-stub'
-    }
   }
 
   componentDidMount() {
-    this.props.actions.loadAlbum();
-    // {console.log('album in photocontainer')};
-    // {console.log(this.props.album)}
+    {this.pk = this.props.match.params.id}
+    this.props.actions.loadAlbum(this.pk);
   }
 
   renderImages(album) {
     return _.map(album, photo => {
       return (
-        <Image key={photo.pk} photo={photo}/>
+        <Image key={photo.pk} next={this.props.location.pathname} photo={photo}/>
       )
     })
   }
@@ -60,7 +56,7 @@ function mapDispatchToProps(dispatch) {
   }
 }
 
-export default connect(
+export default withRouter(connect(
   mapStateToProps,
   mapDispatchToProps
-)(PhotoContainer);
+)(PhotoContainer));

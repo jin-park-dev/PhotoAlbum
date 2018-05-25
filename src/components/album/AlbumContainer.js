@@ -6,7 +6,9 @@ import {withRouter} from 'react-router-dom';
 import * as albumActions from '../../actions/albumActions';
 import Image from './Image';
 
-class PhotoContainer extends Component {
+import _ from 'lodash';
+
+class AlbumContainer extends Component {
   constructor(props, context) {
     super(props, context);
   }
@@ -19,7 +21,10 @@ class PhotoContainer extends Component {
   renderImages(album) {
     return _.map(album, photo => {
       return (
-        <Image key={photo.pk} next={this.props.location.pathname} photo={photo}/>
+        <div key={photo.pk}>
+          {console.log(this.props.location.pathname)}
+          <Image key={photo.pk} next={this.props.location.pathname} photo={photo}/>
+        </div>
       )
     })
   }
@@ -40,7 +45,7 @@ class PhotoContainer extends Component {
   }
 }
 
-PhotoContainer.propTypes = {
+AlbumContainer.propTypes = {
   album: PropTypes.object.isRequired,
   actions: PropTypes.object.isRequired,
   // loadAlbum: PropTypes.func.isRequired
@@ -59,4 +64,4 @@ function mapDispatchToProps(dispatch) {
 export default withRouter(connect(
   mapStateToProps,
   mapDispatchToProps
-)(PhotoContainer));
+)(AlbumContainer));

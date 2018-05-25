@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import Title from './AlbumTitle';
-import PhotoContainer from './PhotoContainer';
+import AlbumContainer from './AlbumContainer';
 
 const AlbumPage = () => {
   return (
     <div>
       <Title />
-      <PhotoContainer />
+      <AlbumContainer />
     </div>
   );
 };

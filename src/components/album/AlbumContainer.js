@@ -35,7 +35,8 @@ class AlbumContainer extends Component {
     const {album} = this.props;
     return (
       <div>
-        <div className="d-flex flex-wrap">
+        {/*<div className="d-flex flex-wrap">*/}
+        <div className="album-container">
           {this.renderImages(album)}
         </div>
         {/*{console.log(album)}*/}

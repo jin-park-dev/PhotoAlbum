@@ -7,7 +7,7 @@ const Image = ({photo, match}) => {
     <div>
       <Link to={`${match.url}/${photo.pk}`}>
         <div className="image-container-div">
-          <img src={photo.image} className="img-thumbnail" alt={photo.pk}/>
+          <img src={photo.image} className="" alt={photo.pk}/>
           {/*{photo.pk}. {photo.name}*/}
         </div>
       </Link>

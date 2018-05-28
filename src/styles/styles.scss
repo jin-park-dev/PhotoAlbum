@@ -7,7 +7,8 @@ $vin-blue: #5bb7db;
 ////////////
 
 body {
-  background-color: #efefef;
+  //background-color: #efefef;
+  background-color: #363636;
 
 }
 
@@ -19,25 +20,17 @@ h2 {
   color: $vin-blue;
 }
 
-///////////////
+
+//////////////
 /* AlbumPage */
 ///////////////
 
-.image-container-div {
-  //border-style: solid;
+.album-container {
   display: flex;
-  justify-content: flex-end;
-  width: 16vw;
-  height: 16vw;
-  overflow: hidden;
+  flex-wrap: wrap;
+  //justify-content: space-between;
+  justify-content: center;
 }
-
-.image-container-div > img {
-  max-width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-
 
 /* AlbumTitle */
 
@@ -69,4 +62,35 @@ h2 {
 
 .PhotoPage-img {
   max-height: 80vh;
+}
+
+
+
+
+
+//////////////////////
+/* Share components */
+//////////////////////
+
+/* Image */
+
+.image-container-div {
+  //border-style: solid;
+  display: flex;
+  max-width: 18vw;
+  max-height: 18vw;
+  min-width: 8vw;
+  min-height: 8vw;
+}
+
+.image-container-div > img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+
+  padding: 0.25rem;
+  margin: 0px 1px;
+  //background-color: #fff;
+  //border: 1px solid #dee2e6;
+  border-radius: 4px;
 }

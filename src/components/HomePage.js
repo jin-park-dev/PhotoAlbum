@@ -3,12 +3,15 @@ import { Link } from 'react-router-dom';
 
 const HomePage = () => {
   return (
-    <div className="text-center">
-      <h1>Photo Album</h1>
-      <h2>Get Started</h2>
-      <Link to="/albums">Album Page</Link> <br/>
-      <Link to="/albumStatic">Photo Example Page</Link>
-    </div>
+      <div className="intro-container text-center">
+        <h1 className="display-4">Photo Album</h1>
+        <p className="lead"></p>
+        <hr className="my-4" />
+          <p>Photo Album created with React/Redux and Django Rest</p>
+          <p className="lead">
+            <Link to="/albums"><a className="btn btn-warning btn-lg" href="#" role="button">Albums Page</a></Link>
+          </p>
+      </div>
   );
 };
 

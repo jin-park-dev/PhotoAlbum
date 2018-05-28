@@ -19,7 +19,7 @@ class AlbumCollectionContainer extends Component {
     return _.map(albumCollection, album => {
       return (
         <div key={album.pk}>
-          <p>{album.pk}</p>
+          <div className="text-center">{album.pk}</div>
           <Image match={this.props.match} photo={album}/>
         </div>
       )
@@ -32,7 +32,7 @@ class AlbumCollectionContainer extends Component {
     const {albumCollection} = this.props;
     return (
       <div>
-        <div className="d-flex flex-wrap">
+        <div className="album-container">
           {this.renderImages(albumCollection)}
         </div>
       </div>

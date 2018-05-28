@@ -5,7 +5,7 @@ import AlbumCollectionContainer from './AlbumCollectionContainer'
 const AlbumsPage = () => {
   return (
     <div>
-      <h1>Albums Page</h1>
+      <h1 className="text-center">Albums Page</h1>
       <AlbumCollectionContainer />
     </div>
   );

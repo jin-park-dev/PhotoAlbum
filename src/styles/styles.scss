@@ -38,6 +38,24 @@ h2 {
   object-fit: cover;
 }
 
+
+/* AlbumTitle */
+
+.albumtitle-container {
+  //border-top: solid;
+  //border-bottom: solid;
+  //background-color: aliceblue;
+
+  border-left: solid;
+  border-left-width: 10px;
+  border-left-color: slategray;
+  background-color: lightsteelblue;
+
+  padding-bottom: 1px;
+
+  margin: 1px 0px;
+}
+
 ///////////////
 /* PhotoPage */
 ///////////////
@@ -46,8 +64,9 @@ h2 {
 .photo-container-div {
   display: flex;
   justify-content: center;
+  //align-self: center;
 }
 
 .PhotoPage-img {
-  height: 80vh
+  max-height: 80vh;
 }

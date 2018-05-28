@@ -22,8 +22,8 @@ class AlbumContainer extends Component {
     return _.map(album, photo => {
       return (
         <div key={photo.pk}>
-          {console.log(this.props.location.pathname)}
-          <Image key={photo.pk} next={this.props.location.pathname} photo={photo}/>
+          {/*{console.log(this.props.location.pathname)}*/}
+          <Image key={photo.pk} match={this.props.match} photo={photo}/>
         </div>
       )
     })

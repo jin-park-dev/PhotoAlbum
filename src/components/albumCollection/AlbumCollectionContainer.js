@@ -20,7 +20,7 @@ class AlbumCollectionContainer extends Component {
       return (
         <div key={album.pk}>
           <p>{album.pk}</p>
-          <Image next={this.props.location.pathname} photo={album}/>
+          <Image match={this.props.match} photo={album}/>
         </div>
       )
     })

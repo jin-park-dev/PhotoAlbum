@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-const Image = ({photo, next}) => {
+const Image = ({photo, match}) => {
   return (
     <div>
-      <Link to={next + '/' + photo.pk}>
+      <Link to={`${match.url}/${photo.pk}`}>
         <div className="image-container-div">
           <img src={photo.image} className="img-thumbnail" alt={photo.pk}/>
           {/*{photo.pk}. {photo.name}*/}
@@ -17,7 +17,7 @@ const Image = ({photo, next}) => {
 
 Image.propTypes = {
   photo: PropTypes.object.isRequired,
-  next: PropTypes.string.isRequired,
+  match: PropTypes.object.isRequired,
 };
 
 export default Image;

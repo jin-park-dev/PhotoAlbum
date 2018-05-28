@@ -1,21 +1,43 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
-import {withRouter} from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
+
 // import * as photoActions from "../../actions/photoActions";
 import * as albumActions from "../../actions/albumActions";
 import {bindActionCreators} from "redux";
 
 class PhotoPage extends Component {
-  // constructor(props, context) {
-  //   super(props, context);
-  // }
+  constructor(props, context) {
+    super(props, context);
+    this.albumUrl = this.albumUrl.bind(this);
+  }
 
   componentDidMount() {
-    console.log('ComponentDidMount here');
-    console.log(this.props);
-    console.log(this.props.albumPk);
+    // console.log('ComponentDidMount here');
+    // console.log(this.props);
+    // console.log(this.props.albumPk);
     this.props.actions.loadAlbum(this.props.albumPk);
+  }
+
+  albumUrl() {
+    const curUrl = this.props.match.url;
+    const id = this.props.match.params.id;
+
+    let curUrlSplit = curUrl.split('/');
+    // console.log(curUrlSplit);
+    if (curUrlSplit[curUrlSplit.length-1] === id) {
+      // console.log(`id matches. should almost always be true`);
+      curUrlSplit.pop();
+      // console.log(`curUrlSplit: ${curUrlSplit}`);
+      let url = curUrlSplit.join('/');
+      // console.log(url);
+      return url
+    } else {
+      return '/'
+    }
+
+
   }
 
   render() {
@@ -23,7 +45,7 @@ class PhotoPage extends Component {
     // {console.log(this.props)}
     // console.log(this.props.actions.loadPhoto(this.pk));
 
-    const { photoPk, albumPk, album } = this.props;
+    const { photoPk, album } = this.props;
     const photo = album[photoPk];
 
     if (!photo) {
@@ -33,9 +55,9 @@ class PhotoPage extends Component {
     return (
       <div>
         <div className="photo-container-div">
-          <a href={photo.image}>
+          <Link to={this.albumUrl()}>
             <img src={photo.image} className="img-thumbnail PhotoPage-img" alt={photo.name}/>
-          </a>
+          </Link>
         </div>
         <div className="d-flex justify-content-center">
           {photo.name}

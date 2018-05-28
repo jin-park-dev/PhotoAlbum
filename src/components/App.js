@@ -21,13 +21,13 @@ class App extends React.Component {
         <Header />
         <Switch>
           <Route exact path="/" component={HomePage} />
+
           <Route path="/albums/:id/:id" component={PhotoPage} />
           <Route path="/albums/:id" component={AlbumPage} />
           <Route path="/albums" component={AlbumsPage} />
 
-          <Route path="/albumStatic/:id" component={PhotoPage} />
-
           <Route path="/about" component={AboutPage} />
+
           {/*<Route component={NotFoundPage} />*/}
         </Switch>
       </div>
